@@ -1,0 +1,23 @@
+CREATE DATABASE d23r;
+USE d23r;
+
+CREATE TABLE students(stu_id INT, stu_name VARCHAR(20),
+marks SMALLINT);
+-- INSERT ONE VALUE
+INSERT INTO students VALUE(101,'Varun',4200);
+-- INSERT MULTIPLE VALUES
+INSERT INTO students VALUES(102,'Bhai',5000),
+(103,'Arjun',3000),
+(104,'Ramesh',3500),
+(105,'Mahesh',4200);
+
+DESCRIBE students;
+-- UPDATE THE DATA
+SET SQL_SAFE_UPDATES = 0;
+UPDATE students SET marks = 3000 WHERE stu_id = 102;
+
+SELECT * FROM students;
+
+-- DELETE THE DATA FROM TABLE
+
+DELETE FROM students WHERE stu_id = 103;
